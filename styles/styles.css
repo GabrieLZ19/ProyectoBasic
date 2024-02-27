@@ -10,12 +10,13 @@
 
 h1,h6{
 
+    color: orange;
     text-align: center;
     
 }
 
 h6{
-
+    color: white;
     font-size: 15px;
 }
 #contenedorHistoria{
@@ -97,12 +98,19 @@ h6{
     width: fit-content;
 }
 
-#contenedorActividades input,button{
+#contenedorActividades input,button,textarea{
 
     border-radius: 25px;
+    padding-top: 5px;
     padding-left: 20px;
     height: 40px;
 
+}
+
+#descripcion{
+
+    list-style: none;
+    resize: none;
 }
 
 #contenedorActividades .inputDescripcion{
