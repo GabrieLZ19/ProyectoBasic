@@ -1,3 +1,40 @@
+class Activity{
+
+    constructor(id,title,description,imgUrl){
+
+        this.id=id;
+        this.title=title;
+        this.description=description;
+        this.imgUrl=imgUrl;
+
+    }
+
+
+}
+
+class Repository{
+
+    constructor(){
+
+        this.activities=[];
+    }
+    getAllActivities(){
+        
+        return this.activities;
+        
+    }
+
+    createActivity(arreglo){
+
+        this.activities.push(arreglo);
+
+    }
+
+    deleteActivity(id){
+
+        this.activities=this.activities.filter((item)=> item.id!==id);
+    }
+}
 
 const formulario = document.querySelector("#contenedorActividades");
 
