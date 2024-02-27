@@ -3,68 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="styles/reset.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Este soy yo</title>
 </head>
 
 <body>
     
     <main>
 
-        <h1 >Gabriel Lazo</h1>
+        <h1>Gabriel Lazo</h1>
 
         <h6>Mi pagina Web </h6>
 
-        <article>
+        <article id="contenedorHistoria" >
 
             <p>¿Quien soy?</p>
             
-            <p>Soy un estudiante de la carrera Ingeniera en sistemas y ahora me estoy por pasar a ingeneria informatica porque enseñan mas programacion, ya hice algunos cursos antes de henry pero casi ninguno pude terminarlo, quise entrar a henry por la forma en la que te acompañan y las multiples cosas que puedes aprender. Mi camino en Henry aqui comienza</p>
+            <p>Soy un estudiante de la carrera Ingeniera en sistemas y ahora me estoy por pasar a ingeneria informatica porque enseñan mas programacion, ya hice algunos cursos antes de henry pero casi ninguno pude terminarlo, quise entrar a henry por la forma en la que te acompañan y las multiples cosas que puedes aprender. Mi camino en Henry comienza aqui</p>
             
         </article>
 
-        <section>
+        <section id="contenedorTecnologias">
 
-            <p>Mis hobbies</p>
+            <p id="tituloTecnologias">Mis Tecnologias Favoritas</p>
 
-            <div>
+            <div class="contenedorImagenes">
 
-                <p>Jugar</p>
-                <img src="#" alt="Jugando">
-
-            </div>
-
-            <div>
-
-                <p>Ver anime</p>
-                <img src="#" alt="Jugando">
+                <p class="tituloImagen">HTML</p>
+                <img src="assets/Img/html.png" alt="HTML">
 
             </div>
 
-            <div>
+            <div class="contenedorImagenes">
 
-                <p>Programar</p>
-                <img src="#" alt="Jugando">
+                <p class="tituloImagen">CSS</p>
+                <img src="assets/Img/css.png" alt="CSS">
+
+            </div>
+
+            <div class="contenedorImagenes">
+
+                <p class="tituloImagen">ChatGPT</p>
+                <img src="assets/Img/gpt.png" alt="ChatGPT">
 
             </div>
 
 
         </section>
 
-        <section>
+        <fieldset id="contenedorActividades">
             
-            <p>Mis actividades Favoritas</p>
+            <legend>Mis actividades Favoritas</legend>
 
             <input type="text" placeholder="Nombre de la Actividad">
 
-            <input type="text" placeholder="Descripcion de la Actividad">
+            <input type="text" placeholder="Descripcion de la Actividad" class="inputDescripcion">
 
             <input type="text" placeholder="Link de Imagen">
 
-            <button>Agregar Actividad</button>
+            <button id="botonAgregar">Agregar Actividad</button>
 
 
-        </section>
+        </fieldset>
 
         <div>
 
