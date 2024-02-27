@@ -88,6 +88,14 @@ h6{
 
 }
 
+#contenedorActividades legend{
+
+    border-radius: 25px;
+    background-color: orange;
+    padding:10px;
+    font-weight: bold;
+}
+
 #contenedorActividades input,button{
 
     border-radius: 25px;
