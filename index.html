@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="shortcut icon" href="assets/Img/jugador.png">
     <title>Este soy yo</title>
 </head>
 
@@ -61,26 +62,33 @@
 
         </section>
 
-        <fieldset id="contenedorActividades">
+        <form id="contenedorActividades">
             
             <legend>Mis actividades Favoritas</legend>
 
-            <input type="text" placeholder="Nombre de la Actividad">
+            <input type="text" placeholder="Nombre de la Actividad" id="actividad">
 
-            <input type="text" placeholder="Descripcion de la Actividad" class="inputDescripcion">
+            <input type="text" placeholder="Descripcion de la Actividad" class="inputDescripcion" id="descripcion">
 
-            <input type="text" placeholder="Link de Imagen">
+            <input type="text" placeholder="Link de Imagen" id="link">
 
-            <button id="botonAgregar">Agregar Actividad</button>
+            <button id="botonAgregar" type="submit" >Agregar Actividad</button>
 
+        </form>
 
-        </fieldset>
+        <script src="scripts/index.js"></script>
 
-        <div>
+        <section id="contenedorRespuestaActividad">
 
+            <div id="actividadAgregada"> 
 
+                <p id="tituloActividad"></p>
+                <img id="imagenActividad">
+                <p id="descripcionActividad"></p>
 
-        </div>
+            </div>
+
+        </section>
 
 
 
