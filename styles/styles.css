@@ -110,7 +110,7 @@ h6{
 
 }
 
-#contenedorActividades legend{
+#contenedorActividades span{
 
     border-radius: 25px;
     background-color: orange;
@@ -132,12 +132,7 @@ h6{
 
     list-style: none;
     resize: none;
-}
-
-#contenedorActividades .inputDescripcion{
-
     height: 100px;
-
 }
 
 #botonAgregar{
