@@ -23,13 +23,16 @@ class Repository {
   }
 
   deleteActivity(id) {
-    this.activities = this.activities.filter((item) => item.id !== id);
+    this.activities = this.activities.filter((activity) => activity.id !== id); //activity recibe los valores de activities por eso se pone activity.id
   }
 }
 
 const prueba = new Repository();
 
 console.log(prueba.createActivity("yoga", "es bueno", "#"));
+console.log(prueba.createActivity("nose", "jsjsjsjs", "#"));
+console.log(prueba.getAllActivities());
+prueba.deleteActivity(2);
 console.log(prueba.getAllActivities());
 
 const formulario = document.querySelector("#contenedorActividades");
