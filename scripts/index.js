@@ -56,7 +56,7 @@ function crearContenedor() {
   const contenedorHTML = document.querySelector(
     "#contenedorRespuestaActividad"
   );
-  contenedorHTML.textContent = "";
+  contenedorHTML.innerHTML = "";
 
   const actividades = repositorio.getAllActivities();
   const actividadesHTML = actividades.map((act) => CrearActividad(act)); //crea un nuevo array
