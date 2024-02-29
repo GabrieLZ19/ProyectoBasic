@@ -52,6 +52,18 @@ function ApretarBoton() {
   crearContenedor();
 }
 
+function crearContenedor() {
+  const contenedorHTML = document.querySelector(
+    "#contenedorRespuestaActividad"
+  );
+  contenedorHTML.textContent = "";
+
+  const actividades = repositorio.getAllActivities();
+  const actividadesHTML = actividades.map((act) => CrearActividad(act)); //crea un nuevo array
+
+  actividadesHTML.forEach((actHTML) => contenedorHTML.appendChild(actHTML)); //recorre y muestra las actividades
+}
+
 function CrearActividad(activity) {
   const contenedor = document.createElement("div");
   contenedor.className = "contenedorActividades";
@@ -83,18 +95,4 @@ function CrearActividad(activity) {
   contenedor.appendChild(botonBorrar);
 
   return contenedor;
-}
-
-function crearContenedor() {
-  const contenedorHTML = document.querySelector(
-    "#contenedorRespuestaActividad"
-  );
-  contenedorHTML.textContent = "";
-
-  const actividades = repositorio.getAllActivities();
-  const activitiesHTML = actividades.map((act) => CrearActividad(act));
-
-  activitiesHTML.forEach((actHTML) => contenedorHTML.appendChild(actHTML));
-
-  contenedorHTML.reset();
 }
