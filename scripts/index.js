@@ -47,6 +47,7 @@ function ApretarBoton() {
   }
 
   repositorio.createActivity(titulo, descripcion, link);
+  formulario.reset();
 
   crearContenedor();
 }
@@ -68,9 +69,18 @@ function CrearActividad(activity) {
   imagen.src = activity.imgUrl;
   imagen.className = "imagenActividad";
 
+  const botonBorrar = document.createElement("button");
+  botonBorrar.className = "botonBorrar";
+  botonBorrar.textContent = "Eliminar";
+  botonBorrar.addEventListener("click", () => {
+    repositorio.deleteActivity(activity.id);
+    crearContenedor();
+  });
+
   contenedor.appendChild(titulo);
   contenedor.appendChild(imagen);
   contenedor.appendChild(descripcion);
+  contenedor.appendChild(botonBorrar);
 
   return contenedor;
 }
@@ -85,4 +95,6 @@ function crearContenedor() {
   const activitiesHTML = actividades.map((act) => CrearActividad(act));
 
   activitiesHTML.forEach((actHTML) => contenedorHTML.appendChild(actHTML));
+
+  contenedorHTML.reset();
 }

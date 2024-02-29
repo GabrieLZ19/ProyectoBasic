@@ -158,3 +158,10 @@ textarea {
   width: 150px;
   border-radius: 25px;
 }
+
+.botonBorrar {
+  background-color: orange;
+  border-radius: 25px;
+  margin-top: 10px;
+  padding: 10px;
+}
