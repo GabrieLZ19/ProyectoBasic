@@ -41,10 +41,12 @@ function ApretarBoton() {
   const descripcion = document.querySelector("#descripcion").value;
   const link = document.querySelector("#link").value;
 
-  if (titulo == "" || descripcion == "" || link == "") {
-    alert("Debes llenar todos los campos");
-    return;
-  }
+  if (!titulo || !descripcion || !link)
+    return alert("Debe rellenar todos los campos");
+  // if (titulo == "" || descripcion == "" || link == "") {
+  //   alert("Debes llenar todos los campos");
+  //   return;
+  // }
 
   repositorio.createActivity(titulo, descripcion, link);
   formulario.reset();
