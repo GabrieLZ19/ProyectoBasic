@@ -1,5 +1,4 @@
-
- html{
+html {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -8,181 +7,154 @@
   color: white;
 }
 
-#navegacion{
-    background-color: #343434;
-    margin: 20px 20px 40px 20px;
-    padding: 10px;
-    border-radius: 25px;
+#navegacion {
+  background-color: #343434;
+  margin: 20px 20px 40px 20px;
+  padding: 10px;
+  border-radius: 25px;
 }
 
-#contenedorNav{
-
-    display: flex;
-    justify-content: space-around;
+#contenedorNav {
+  display: flex;
+  justify-content: space-around;
 }
 
-#contenedorNav li{
-
-    background-color: orange;
-    font-weight: bold;
-    border-radius: 25px;
-    padding: 10px;
-    list-style: none;
+#contenedorNav li {
+  background-color: orange;
+  font-weight: bold;
+  border-radius: 25px;
+  padding: 10px;
+  list-style: none;
 }
-h1,h6{
-
-    color: orange;
-    text-align: center;
-    
+h1,
+h6 {
+  color: orange;
+  text-align: center;
 }
 
-h6{
-    color: white;
-    font-size: 15px;
+h6 {
+  color: white;
+  font-size: 15px;
 }
-#contenedorHistoria{
-
-    text-align: center;
-    margin: 20px 20px 40px 20px;
-    padding: 10px;
-    width: fit-content;
-    border-radius: 25px;
-    background-color: #343434;
-
+#contenedorHistoria {
+  text-align: center;
+  margin: 20px 20px 40px 20px;
+  padding: 10px;
+  width: fit-content;
+  border-radius: 25px;
+  background-color: #343434;
 }
 
-#contenedorTecnologias{
-    
-    text-align: center;
-    margin: 20px 20px 40px 20px;
-    background-color: #343434;
-    border-radius: 25px;
-    padding: 10px 10px 30px 10px ;   
-
+#contenedorTecnologias {
+  text-align: center;
+  margin: 20px 20px 40px 20px;
+  background-color: #343434;
+  border-radius: 25px;
+  padding: 10px 10px 30px 10px;
 }
 
-#tituloTecnologias{
-
-    padding-top: 20px;
-    font-size: 20px;
+#tituloTecnologias {
+  padding-top: 20px;
+  font-size: 20px;
 }
 
-.contenedorImagenes{
-
-    display: inline-block;
-    padding-top: 20px;
-    margin-top: 20px;
-    margin-right: 30px;
-    border-radius: 25px;
-    background-color: #1d1b1b;
-    width: 300px;
-    height: 300px;
+.contenedorImagenes {
+  display: inline-block;
+  padding-top: 20px;
+  margin-top: 20px;
+  margin-right: 30px;
+  border-radius: 25px;
+  background-color: #1d1b1b;
+  width: 300px;
+  height: 300px;
 }
 
-.contenedorImagenes img{
-
-    margin-top: 30px;
-    width: 200px;
-    height: 200px;
-    filter: grayscale(1);
-
+.contenedorImagenes img {
+  margin-top: 30px;
+  width: 200px;
+  height: 200px;
+  filter: grayscale(1);
 }
 
-.contenedorImagenes img:hover{
-
-    transform: scale(1.2);
-    transition: 2s;
-    filter: grayscale(0);
-
+.contenedorImagenes img:hover {
+  transform: scale(1.2);
+  transition: 2s;
+  filter: grayscale(0);
 }
 
-#contenedorActividades{
-
-    margin: 20px 20px 40px 20px;
-    background-color: #343434;
-    border-radius: 25px;
-    border: none;
-    padding: 20px 30px 30px 30px ; 
-    height: max-content;
-    gap: 20px;
-    display: grid;
-    
-
+#contenedorActividades {
+  margin: 20px 20px 40px 20px;
+  background-color: #343434;
+  border-radius: 25px;
+  border: none;
+  padding: 20px 30px 30px 30px;
+  height: max-content;
+  gap: 20px;
+  display: grid;
 }
 
-#contenedorActividades span{
-
-    border-radius: 25px;
-    background-color: orange;
-    padding:10px;
-    font-weight: bold;
-    width: fit-content;
+#contenedorActividades span {
+  border-radius: 25px;
+  background-color: orange;
+  padding: 10px;
+  font-weight: bold;
+  width: fit-content;
 }
 
-#contenedorActividades input,button,textarea{
-
-    border-radius: 25px;
-    padding-top: 5px;
-    padding-left: 20px;
-    height: 40px;
-
+#contenedorActividades input,
+button,
+textarea {
+  border-radius: 25px;
+  padding-top: 5px;
+  padding-left: 20px;
+  height: 40px;
 }
 
-#descripcion{
-
-    list-style: none;
-    resize: none;
-    height: 100px;
+#descripcion {
+  list-style: none;
+  resize: none;
+  height: 100px;
 }
 
-#botonAgregar{
-
-    padding-right: 20px;
-    width: 200px;
-    font-weight: bold;
+#botonAgregar {
+  padding-right: 20px;
+  width: 200px;
+  font-weight: bold;
 }
 
-#botonAgregar:hover{
-
-    background-color: orange;
-    transform: scale(1.1);
-    transition: 2s;
-    cursor: pointer;
+#botonAgregar:hover {
+  background-color: orange;
+  transform: scale(1.1);
+  transition: 2s;
+  cursor: pointer;
 }
 
-#contenedorRespuestaActividad{
-    
-    border-radius: 25px;
-    padding: 30px 10px 30px 10px ; 
-    margin: 20px 20px 40px 20px;
-    display: flex;
-    justify-content: space-around;
-
-
-}
-#actividadAgregada{
-
-    background-color:#343434;
-    text-align: center;
-    border-radius: 25px;
-    padding: 20px;
+#contenedorRespuestaActividad {
+  border-radius: 25px;
+  padding: 30px 10px 30px 10px;
+  margin: 20px 20px 40px 20px;
+  display: flex;
+  justify-content: space-around;
 }
 
-#tituloActividad{
-
-    font-size: 20px;
-    padding-bottom: 10px;
-
+.contenedorActividades {
+  background-color: #343434;
+  text-align: center;
+  border-radius: 25px;
+  padding: 20px;
 }
 
-#imagenActividad{
-
-    width: 150px;
-    border-radius: 25px;
+.tituloActividad {
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 
-#descripcionActividad{
+.descripcionActividad {
+  font-size: 12px;
+  padding-top: 10px;
+}
 
-    font-size: 12px;
-    padding-top: 10px;
+.imagenActividad {
+  width: 150px;
+  border-radius: 25px;
 }

@@ -27,32 +27,62 @@ class Repository {
   }
 }
 
-const prueba = new Repository();
-
-console.log(prueba.createActivity("yoga", "es bueno", "#"));
-console.log(prueba.createActivity("nose", "jsjsjsjs", "#"));
-console.log(prueba.getAllActivities());
-prueba.deleteActivity(2);
-console.log(prueba.getAllActivities());
+const repositorio = new Repository();
 
 const formulario = document.querySelector("#contenedorActividades");
 
-formulario.addEventListener("submit", validarFormulario);
+formulario.addEventListener("submit", function (elemento) {
+  elemento.preventDefault();
+  ApretarBoton();
+});
 
-function validarFormulario(elemento) {
-  elemento.preventDefault(); //no recarga la pagina
+function ApretarBoton() {
+  const titulo = document.querySelector("#actividad").value;
+  const descripcion = document.querySelector("#descripcion").value;
+  const link = document.querySelector("#link").value;
 
-  let actividad = document.querySelector("#actividad").value;
-  let descripcion = document.querySelector("#descripcion").value;
-  let link = document.querySelector("#link").value;
+  if (titulo == "" || descripcion == "" || link == "") {
+    alert("Debes llenar todos los campos");
+    return;
+  }
 
-  let titulo = document.querySelector("#tituloActividad");
-  let comentario = document.querySelector("#descripcionActividad");
-  let imagen = document.querySelector("#imagenActividad");
+  repositorio.createActivity(titulo, descripcion, link);
 
-  titulo.textContent = actividad;
-  comentario.textContent = descripcion;
-  imagen.src = link;
+  crearContenedor();
+}
 
-  formulario.reset();
+function CrearActividad(activity) {
+  const contenedor = document.createElement("div");
+  contenedor.className = "contenedorActividades";
+  contenedor.id = activity.id;
+
+  const titulo = document.createElement("h2");
+  titulo.textContent = activity.title;
+  titulo.className = "tituloActividad";
+
+  const descripcion = document.createElement("p");
+  descripcion.textContent = activity.description;
+  descripcion.className = "descripcionActividad";
+
+  const imagen = document.createElement("img");
+  imagen.src = activity.imgUrl;
+  imagen.className = "imagenActividad";
+
+  contenedor.appendChild(titulo);
+  contenedor.appendChild(imagen);
+  contenedor.appendChild(descripcion);
+
+  return contenedor;
+}
+
+function crearContenedor() {
+  const contenedorHTML = document.querySelector(
+    "#contenedorRespuestaActividad"
+  );
+  contenedorHTML.textContent = "";
+
+  const actividades = repositorio.getAllActivities();
+  const activitiesHTML = actividades.map((act) => CrearActividad(act));
+
+  activitiesHTML.forEach((actHTML) => contenedorHTML.appendChild(actHTML));
 }

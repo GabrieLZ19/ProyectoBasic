@@ -1,108 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">  
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="shortcut icon" href="assets/Img/jugador.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="assets/Img/jugador.png" />
     <title>Este soy yo</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <header>
+      <nav id="navegacion">
+        <ul id="contenedorNav">
+          <li><a href="#contenedorHistoria">Sobre mi</a></li>
+          <li>
+            <a href="#contenedorTecnologias">Mis Tecnologias Favoritas</a>
+          </li>
+          <li><a href="#contenedorActividades">Mis actividades</a></li>
+        </ul>
+      </nav>
 
-        <nav id="navegacion">
+      <h1>Gabriel Lazo</h1>
 
-            <ul id="contenedorNav">
-                <li><a href="#contenedorHistoria">Sobre mi</a></li>
-                <li><a href="#contenedorTecnologias">Mis Tecnologias Favoritas</a></li>
-                <li><a href="#contenedorActividades">Mis actividades</a></li>
-            </ul>
-
-        </nav>
-
-        <h1>Gabriel Lazo</h1>
-    
-        <h6>Mi pagina Web </h6>
-
+      <h6>Mi pagina Web</h6>
     </header>
-    
+
     <main>
+      <article id="contenedorHistoria">
+        <p>¿Quien soy?</p>
 
-        <article id="contenedorHistoria" >
+        <p>
+          Soy estudiante de la carrera Ingeniera en Sistemas de Información de
+          4to año. Ya complete cursos como de QA Tester,quise entrar en henry
+          por la forma en la que te acompañan y las multiples cosas que puedes
+          aprender. Mi camino en Henry comienza aqui
+        </p>
+      </article>
 
-            <p>¿Quien soy?</p>
-            
-            <p>Soy estudiante de la carrera Ingeniera en Sistemas de Información de 4to año. Ya complete cursos como de QA Tester,quise entrar en henry por la forma en la que te acompañan y las multiples cosas que puedes aprender. Mi camino en Henry comienza aqui</p>
-            
-        </article>
+      <section id="contenedorTecnologias">
+        <p id="tituloTecnologias">Mis Tecnologias Favoritas</p>
 
-        <section id="contenedorTecnologias">
+        <div class="contenedorImagenes">
+          <p class="tituloImagen">HTML</p>
+          <img src="assets/Img/html.png" alt="HTML" />
+        </div>
 
-            <p id="tituloTecnologias">Mis Tecnologias Favoritas</p>
+        <div class="contenedorImagenes">
+          <p class="tituloImagen">CSS</p>
+          <img src="assets/Img/css.png" alt="CSS" />
+        </div>
 
-            <div class="contenedorImagenes">
+        <div class="contenedorImagenes">
+          <p class="tituloImagen">ChatGPT</p>
+          <img src="assets/Img/gpt.png" alt="ChatGPT" />
+        </div>
+      </section>
 
-                <p class="tituloImagen">HTML</p>
-                <img src="assets/Img/html.png" alt="HTML">
+      <form id="contenedorActividades">
+        <span>Mis actividades Favoritas</span>
 
-            </div>
+        <input
+          type="text"
+          placeholder="Nombre de la Actividad"
+          id="actividad"
+        />
 
-            <div class="contenedorImagenes">
+        <textarea
+          type="text"
+          placeholder="Descripcion de la Actividad"
+          id="descripcion"
+        ></textarea>
 
-                <p class="tituloImagen">CSS</p>
-                <img src="assets/Img/css.png" alt="CSS">
+        <input type="text" placeholder="Link de Imagen" id="link" />
 
-            </div>
+        <button id="botonAgregar" type="submit">Agregar Actividad</button>
+      </form>
 
-            <div class="contenedorImagenes">
-
-                <p class="tituloImagen">ChatGPT</p>
-                <img src="assets/Img/gpt.png" alt="ChatGPT">
-
-            </div>
-
-        </section>
-
-        <form id="contenedorActividades">
-            
-            <span>Mis actividades Favoritas</span>
-
-            <input type="text" placeholder="Nombre de la Actividad" id="actividad">
-
-            <textarea type="text" placeholder="Descripcion de la Actividad" id="descripcion"></textarea>
-
-            <input type="text" placeholder="Link de Imagen" id="link">
-
-            <button id="botonAgregar" type="submit" >Agregar Actividad</button>
-
-        </form>
-
-        
-
-        <section id="contenedorRespuestaActividad">
-
-            <div id="actividadAgregada"> 
-
-                <p id="tituloActividad"></p>
-                <img id="imagenActividad">
-                <p id="descripcionActividad"></p>
-
-            </div>
-
-        </section>
-
-
-
-
+      <div id="contenedorRespuestaActividad">
+        <!-- <div id="actividadAgregada">
+          <p id="tituloActividad"></p>
+          <img id="imagenActividad" />
+          <p id="descripcionActividad"></p>
+        </div> -->
+      </div>
     </main>
 
     <script src="scripts/index.js"></script>
-</body>
-
+  </body>
 </html>
