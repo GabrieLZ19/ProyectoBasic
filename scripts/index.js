@@ -67,27 +67,28 @@ function crearContenedor() {
 }
 
 function CrearActividad(activity) {
+  const { id, title, description, imgUrl } = activity;
   const contenedor = document.createElement("div");
   contenedor.className = "contenedorActividades";
-  contenedor.id = activity.id;
+  contenedor.id = id;
 
   const titulo = document.createElement("h2");
-  titulo.textContent = activity.title;
+  titulo.textContent = title;
   titulo.className = "tituloActividad";
 
   const descripcion = document.createElement("p");
-  descripcion.textContent = activity.description;
+  descripcion.textContent = description;
   descripcion.className = "descripcionActividad";
 
   const imagen = document.createElement("img");
-  imagen.src = activity.imgUrl;
+  imagen.src = imgUrl;
   imagen.className = "imagenActividad";
 
   const botonBorrar = document.createElement("button");
   botonBorrar.className = "botonBorrar";
   botonBorrar.textContent = "Eliminar";
   botonBorrar.addEventListener("click", () => {
-    repositorio.deleteActivity(activity.id);
+    repositorio.deleteActivity(id);
     crearContenedor();
   });
 
